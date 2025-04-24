@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat IFSP</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <img src="images/chatifsp.png" alt="Logo do Chat IFSP">
+        <button>Início</button>
+    </header>
+
+    <main class="secao-chat">
+        <div class="area-chat">
+
+            <!-- Área de mensagens inicialmente oculta -->
+            <div class="area-mensagens oculta"></div>
+
+            <!-- Campo de entrada -->
+            <div class="area-entrada">
+                <button class="botao-audio"><img src="images/audio.png" alt="Ligar/desligar áudio"></button>
+                <div class="campo-pergunta">
+                    <input type="text" placeholder="Faça sua pergunta!">
+                    <button class="botao-microfone"><img src="images/microfone.png" alt="Usar microfone"></button>
+                    <button class="botao-enviar"><img src="images/enter.png" alt="Enviar mensagem"></button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Script para funcionamento do chat -->
+    <script src="script.js"></script>
+</body>
+</html>
