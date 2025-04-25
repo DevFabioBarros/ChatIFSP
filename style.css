@@ -47,6 +47,11 @@ body {
     cursor: pointer;
 }
 
+.cabecalho button a{
+    text-decoration: none;
+    color: #333;    
+}
+
 .cabecalho button:hover {
     background-color: var(--verde-claro-hover);
 }
