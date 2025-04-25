@@ -47,7 +47,7 @@ body {
     cursor: pointer;
 }
 
-.cabecalho button a{
+.cabecalho button a {
     text-decoration: none;
     color: #333;    
 }
@@ -159,11 +159,22 @@ body {
 
 /* Mensagem do bot */
 .mensagem.bot {
+    display: flex;
+    align-items: center;
     background-color: var(--fundo-mensagem-bot);
     align-self: flex-start;
     text-align: left;
     margin-right: auto;
     border: 1px solid var(--bordas-bot);
+    padding-left: 40px; 
+}
+
+.mensagem.bot .imagem-bot {
+    height: 40px;
+    width: 40px; 
+    border-radius: 50%; 
+    margin-left: -20px;
+    margin-right: 10px; 
 }
 
 /* Acessibilidade */

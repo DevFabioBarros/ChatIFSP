@@ -42,7 +42,7 @@ body{
 }
 
 .logo-ifsp img{
-    max-width: 30px;
+    max-width: 200px;
     height: auto;
 }
 
@@ -50,7 +50,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 550px;
+    height: 280px;
+    min-height: 280px;
 }
 
 .logo img {

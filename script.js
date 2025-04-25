@@ -13,7 +13,26 @@ function adicionarMensagem(texto, classe) {
 
     const div = document.createElement('div');
     div.classList.add('mensagem', classe);
-    div.innerText = texto;
+
+    if (classe === 'bot') {
+        // Criar a imagem do bot
+        const imagemBot = document.createElement('img');
+        imagemBot.src = 'images/megatron.png';
+        imagemBot.alt = 'Megatron';
+        imagemBot.classList.add('imagem-bot');
+
+        // Criar uma área para o texto da mensagem
+        const textoMensagem = document.createElement('span');
+        textoMensagem.innerText = texto;
+
+        // Adicionar a imagem e o texto à div
+        div.appendChild(imagemBot);
+        div.appendChild(textoMensagem);
+    } else {
+        // Se for a mensagem do usuário, apenas o texto
+        div.innerText = texto;
+    }
+
     areaMensagens.appendChild(div);
 
     // Rolagem automática para a última mensagem
