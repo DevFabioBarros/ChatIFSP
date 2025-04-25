@@ -1,0 +1,180 @@
+:root {
+    --verde-claro: #8fa83d;
+    --verde-claro-hover: #bddc57;
+    --fundo-claro: #e8e8e8;
+    --fundo-mensagem-usuario: #cbe086;
+    --fundo-mensagem-bot: #ffffff;
+    --fundo-area-mensagens: #e1e1e1;
+    --fundo-campo-pergunta: #dcdcdc;
+    --fundo-input: #e1e1e1;
+    --bordas-claras: #ccc;
+    --bordas-bot: #dcdcdc;
+    --texto-claro: #333;
+    --sombra-mensagem: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--fundo-claro);
+    color: var(--texto-claro);
+    padding: 20px;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.cabecalho img {
+    height: 60px;
+}
+
+.cabecalho button {
+    background-color: var(--verde-claro);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cabecalho button a{
+    text-decoration: none;
+    color: #333;    
+}
+
+.cabecalho button:hover {
+    background-color: var(--verde-claro-hover);
+}
+
+/* Área do chat */
+.secao-chat {
+    display: flex;
+    justify-content: center;
+}
+
+.area-chat {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 0 10px var(--sombra-mensagem);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Área de mensagens */
+.area-mensagens {
+    background-color: var(--fundo-area-mensagens);
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 300px;
+    max-height: 500px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.area-mensagens.oculta {
+    display: none;
+}
+
+/* Entrada de mensagem */
+.area-entrada {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.botao-audio img,
+.botao-microfone img,
+.botao-enviar img {
+    height: 20px;
+    width: 20px;
+}
+
+.botao-audio,
+.botao-microfone,
+.botao-enviar {
+    background-color: var(--verde-claro);
+    border: none;
+    padding: 10px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.botao-audio:hover,
+.botao-microfone:hover,
+.botao-enviar:hover {
+    background-color: var(--verde-claro-hover);
+}
+
+/* Campo de pergunta */
+.campo-pergunta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.campo-pergunta input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--bordas-claras);
+    border-radius: 8px;
+    background-color: var(--fundo-input);
+}
+
+/* Estilo das mensagens */
+.mensagem {
+    padding: 12px 18px;
+    border-radius: 12px;
+    word-wrap: break-word;
+    box-shadow: 0 2px 6px var(--sombra-mensagem);
+    display: inline-block;
+    max-width: 80%;
+    margin-bottom: 10px;
+}
+
+/* Mensagem do usuário */
+.mensagem.usuario {
+    background-color: var(--fundo-mensagem-usuario);
+    align-self: flex-end;
+    text-align: right;
+    margin-left: auto;
+    border: 1px solid var(--verde-claro);
+}
+
+/* Mensagem do bot */
+.mensagem.bot {
+    background-color: var(--fundo-mensagem-bot);
+    align-self: flex-start;
+    text-align: left;
+    margin-right: auto;
+    border: 1px solid var(--bordas-bot);
+}
+
+/* Acessibilidade */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
