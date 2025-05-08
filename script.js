@@ -25,7 +25,7 @@ function adicionarMensagem(texto, classe) {
         const textoMensagem = document.createElement('span');
         textoMensagem.innerText = texto;
 
-        // Adicionar a imagem e o texto à div
+        // Adicionar a imagem e o texto
         div.appendChild(imagemBot);
         div.appendChild(textoMensagem);
     } else {
