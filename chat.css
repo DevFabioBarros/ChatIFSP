@@ -180,7 +180,7 @@ body {
 /* Campo de entrada */
 .area-entrada {
   position: fixed;
-  bottom: 0;
+  bottom: 20px;
   left: 0;
   right: 0;
   padding: 15px 20px;
