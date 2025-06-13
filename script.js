@@ -5,6 +5,22 @@ const logo = document.querySelector('.cabecalho img');
 
 let primeiraMensagem = true;
 
+// Aplica o modo escuro/claro salvo
+window.addEventListener('DOMContentLoaded', () => {
+    const modoSalvo = localStorage.getItem('modo');
+    if (modoSalvo === 'escuro') {
+        document.body.classList.add('dark-mode');
+    }
+});
+
+// Alternar modo escuro/claro ao clicar na logo
+logo.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+
+    const modoAtual = document.body.classList.contains('dark-mode') ? 'escuro' : 'claro';
+    localStorage.setItem('modo', modoAtual);
+});
+
 function adicionarMensagem(texto, classe) {
     if (primeiraMensagem) {
         areaMensagens.classList.remove('oculta');
@@ -50,9 +66,4 @@ campoInput.addEventListener('keypress', (event) => {
         event.preventDefault();
         botaoEnviar.click();
     }
-});
-
-// Alternar modo claro/escuro ao clicar na logo
-logo.addEventListener('click', () => {
-    document.body.classList.toggle('modo-escuro');
 });

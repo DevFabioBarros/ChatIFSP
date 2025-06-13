@@ -19,7 +19,7 @@
 }
 
 /* Modo escuro - ao clicar */
-body.modo-escuro {
+body.dark-mode {
   --verde-claro: #4b5d13;
   --verde-claro-hover: #728e1d;
   --fundo-claro: #2b2b2b;

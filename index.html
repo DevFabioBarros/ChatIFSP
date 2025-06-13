@@ -14,7 +14,9 @@
         <header>
           <div class="navibar">
               <div class="logo-ifsp">
-                <img src="images/logoifsp.png" alt="Logo IFSP">
+                <button id="modo-toggle" onclick="toggleDarkMode()">
+                  <img id="modo-icon" src="images/logoifspClaro.png" alt="Logo IFSP">
+                </button>
               </div>
             <div class="navibar-links">
               <a href="chat.html">Começar</a>
@@ -28,7 +30,7 @@
 
         <main>
           <div class="logo">
-            <img src="images/chatifsp.png" alt="Logo Chat IFSP">
+            <img id="chatifsp" src="images/chatifspClaro.png" alt="Logo Chat IFSP">
           </div>
 
           <div class="botao">
@@ -37,10 +39,10 @@
         </main>
       </section>
 
-<!-- SEGUNDA PÁGINA -->
+<!-- SEGUNDA PÁGINA COMEÇA AQUI-->
 
       <section class="secao">
-        <div class="informacoes">
+        <div class="informacoes aparecer">
           <div class="info-esquerda">
             <h2 class="titulo" id="sobre">SOBRE</h2>
             <hr>
@@ -63,5 +65,7 @@
         </div>
       </section>
 
+      <script src="index-script.js"></script>
       </body>
+
 </html>
